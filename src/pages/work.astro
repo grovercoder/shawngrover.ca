@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+
+import Layout from '../layouts/main.astro';
+import WorkPreview from '../components/WorkPreview.astro';
+
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<Layout title="Projects | ShawnGrover.ca" description="Previous projects Shawn Grover has undertaken.">
+    <WorkPreview />
+</Layout>   

@@ -1,0 +1,28 @@
+---
+const { title = "ShawnGrover.ca", description = "" } = Astro.props;
+
+import Header from '../components/SiteHeader.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" property="og:description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style>
+	#work-item .content .h2 {
+		color: blue;
+	}
+</style>

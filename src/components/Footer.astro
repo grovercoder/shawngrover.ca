@@ -1,0 +1,31 @@
+---
+import Icon from "../components/Icon.astro"
+---
+
+<footer class="bg-base-300 p-4 pb-16 ">
+    <div class="flex items-center justify-between mx-auto max-w-full sm:max-w-xl">
+        <div class="flex-1 text-xs sm:text-sm">&copy; 2024 - Shawn Grover.ca<br />All rights reserved.</div>
+        <div class="flex-none mr-4 flex space-x-2 sm:space-x-4">
+            <div class="icon-wrapper">
+                <a href="https://github.com/grovercoder" target="_blank" aria-label="View Shawn's GitHub profile.">
+                    <Icon name="github-logo" width="40" height="40" color="#ffffff" />
+                </a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://www.linkedin.com/in/shawngrover/" target="_blank" aria-label="View Shawn's LinkedIn profile.">
+                    <Icon name="linkedin-logo" width="40" height="40" color="#ffffff" />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .icon-wrapper {
+        transition: transform 0.2s;
+    }
+    .icon-wrapper:hover {
+      transform: scale(1.2); /* Scale the icon on hover */
+    }
+
+</style>

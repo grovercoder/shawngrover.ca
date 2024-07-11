@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets'
+import AvatarImage from '../images/avatar.png'
+
+const { name, tagline } = Astro.props;
+
+---
+
+<section id="hero" class="relative py-12 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center lg:space-x-8">
+            <div class="lg:w-1/2 text-center lg:text-left lg:mb-0">
+                <h1 class="text-4xl lg:text-5xl lg:text-right font-bold text-white mb-4">
+                    {name}
+                </h1>
+                <p class="text-lg lg:text-2xl lg:text-right text-white mb-6">
+                    {tagline}
+                </p>
+                
+            </div>
+            <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                <Image src={AvatarImage} alt="Avatar for Shawn Grover" class="w-full max-w-xs lg:max-w-md rounded-3xl shadow-lg shadow-slate-500">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- <section id="siteHero" class="w-full sm:w-3/4 sm:m-auto sm:flex sm:justify-between sm:items-center sm:mt-4">
+    <div class="flex flex-col sm:flex-row">
+        <div class="left sm:flex-1">
+            <div class="text-4xl w-full text-center">Shawn Grover</div>
+            <div class="text-xs w-full text-center">Techie, Developer, Freelancer, Gadget Geek</div>
+        </div>
+        <div class="right sm:flex-1">
+            <img src="/assets/images/avatar.png" alt="Avatar image for Shawn Grover" class="h-auto w-72 mx-auto sm:mx-0 rounded-3xl my-4">
+        </div>
+
+    </div>
+</section> -->
