@@ -13,7 +13,7 @@ tags:
 
 ## Description
 
-A full stack Census tool for municipalities. The resident interface allowed secure completion of the census and respones to the census questions. An 'enumerator' interface was created to allow door-to-door canvasing by the census workers, using a tablet.  Extra care was needed for the enumerator interface as off-line use is highly likely. The administrative interface allowed authorized personnel to create a census, publish changes to production and monitor results as they arrived. The system handled 'bursty' data with a high volume of responses being submitted in a short period of time.  Multiple municipalities successfully ran their census, some with 1 million+ residents.  Due to the nature of the tool, we applied penetration testing and security audits to minimize potential attack vectors.
+A multi-tenant, full stack Census tool for municipalities. The resident interface allowed secure completion of the census and responses to the census questions. An 'enumerator' interface was created to allow door-to-door canvasing by the census workers, using a tablet.  Extra care was needed for the enumerator interface as off-line use is highly likely. The administrative interface allowed authorized personnel to create a census, publish changes to production and monitor results as they arrived. The system handled 'bursty' data with a high volume of responses being submitted in a short period of time.  Multiple municipalities successfully ran their census, some with 1 million+ residents.  Due to the nature of the tool, we applied penetration testing and security audits to minimize potential attack vectors.
 
 ## Role
 
