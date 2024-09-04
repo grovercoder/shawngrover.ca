@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import AvatarImage from '../images/avatar.png'
+import Icon from "../components/Icon.astro"
 
 const { name, tagline } = Astro.props;
 
@@ -16,7 +17,18 @@ const { name, tagline } = Astro.props;
                 <p class="text-lg lg:text-2xl lg:text-right text-white mb-6">
                     {tagline}
                 </p>
-                
+                <div class="flex-none mr-4 flex space-x-2 sm:space-x-4 justify-center lg:justify-end mb-6">
+                    <div class="icon-wrapper">
+                        <a href="https://github.com/grovercoder" target="_blank" aria-label="View Shawn's GitHub profile.">
+                            <Icon name="github-logo" width="40" height="40" color="#ffffff" />
+                        </a>
+                    </div>
+                    <div class="icon-wrapper">
+                        <a href="https://www.linkedin.com/in/shawngrover/" target="_blank" aria-label="View Shawn's LinkedIn profile.">
+                            <Icon name="linkedin-logo" width="40" height="40" color="#ffffff" />
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="lg:w-1/2 flex justify-center lg:justify-end">
                 <Image src={AvatarImage} alt="Avatar for Shawn Grover" class="w-full max-w-xs lg:max-w-md rounded-3xl shadow-lg shadow-slate-500">
@@ -25,16 +37,12 @@ const { name, tagline } = Astro.props;
     </div>
 </section>
 
+<style>
+    .icon-wrapper {
+        transition: transform 0.2s;
+    }
+    .icon-wrapper:hover {
+      transform: scale(1.2); /* Scale the icon on hover */
+    }
 
-<!-- <section id="siteHero" class="w-full sm:w-3/4 sm:m-auto sm:flex sm:justify-between sm:items-center sm:mt-4">
-    <div class="flex flex-col sm:flex-row">
-        <div class="left sm:flex-1">
-            <div class="text-4xl w-full text-center">Shawn Grover</div>
-            <div class="text-xs w-full text-center">Techie, Developer, Freelancer, Gadget Geek</div>
-        </div>
-        <div class="right sm:flex-1">
-            <img src="/assets/images/avatar.png" alt="Avatar image for Shawn Grover" class="h-auto w-72 mx-auto sm:mx-0 rounded-3xl my-4">
-        </div>
-
-    </div>
-</section> -->
+</style>
